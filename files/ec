@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+date
+equibit-cli -datadir=/data $@

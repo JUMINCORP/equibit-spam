@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-groupadd -o -g ${PGID} spam
-useradd -o -u ${PUID} -g ${PGID} spam
-chown -R spam.spam /spam 
-sudo -u spam -g spam /bin/equibitd -datadir=/spam
+ln -s /spam /data
+/bin/equibitd -datadir=/spam
 

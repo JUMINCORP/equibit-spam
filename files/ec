@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-date
-equibit-cli -datadir=/data $@
+# print the date only if stdout has not been redirected
+equibit-cli -datadir=/data "$@"

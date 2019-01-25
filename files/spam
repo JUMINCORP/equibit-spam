@@ -1,4 +1,26 @@
 #!/usr/bin/env bash
-ln -s /spam /data
-create-node-user 0 0 spam spam
-sudo -u spam -g spam eqbnode
+eqbnode&
+
+# Wait until the node seems responsive
+false
+while [ $? -ne 0 ]; do
+	# The node might not be fully initialized
+	sleep 5s
+	ec help >/dev/null
+done
+
+if [ ! -z "${PRIVKEY}" ]; then
+	echo "Importing key"
+	ec importprivkey ${PRIVKEY}
+	echo "Key imported"
+else
+	echo "Creating new key."
+	echo "Send coins to:"
+	echo ".------------------------------------------------."
+	ADDRESS=$(ec getnewaddress "" bech32)
+	echo ${ADDRESS}
+	echo "'------------------------------------------------'"
+fi
+
+# Sleep all day. Every day.
+while true; do sleep 1d; done

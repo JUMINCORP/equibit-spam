@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+docker build -f node.Dockerfile -t darvs/eqb-node:v01.024 -t darvs/eqb-node:latest .
+
 NAME=node
 
 [ -z "$(docker ps -q -f name=${NAME})" ] || docker stop ${NAME}

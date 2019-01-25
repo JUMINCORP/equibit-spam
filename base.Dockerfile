@@ -1,15 +1,10 @@
 FROM ubuntu:18.04
 
-COPY equibit-core/src/equibit-cli /usr/local/bin/equibit-cli
-COPY equibit-core/src/equibitd /usr/local/bin/equibitd
-COPY files/create-node-user /usr/local/bin/create-node-user
-COPY files/ec /usr/local/bin/ec
-COPY files/eqbnode /usr/local/bin/eqbnode
-
-WORKDIR	/spam 
-
-COPY files/equibit.conf /spam/equibit.conf
-
+COPY equibit-core/src/equibit-cli /usr/local/bin/
+COPY equibit-core/src/equibitd /usr/local/bin/
+COPY files/create-node-user /usr/local/bin/
+COPY files/ec /usr/local/bin/
+COPY files/eqbnode /usr/local/bin/
 
 RUN \
 	apt-get update && \
@@ -20,7 +15,5 @@ RUN \
 
 RUN \
 	apt-get install -y sudo
-
-CMD /bin/spam
 
 # vim: set ft=dockerfile:

@@ -1,0 +1,7 @@
+PUID="${1}"
+PGID="${2}"
+USERNAME="${3}"
+GROUPNAME="${4}"
+groupadd -o -g ${PGID} ${GROUPNAME}
+useradd -o -u ${PUID} -g ${PGID} ${USERNAME}
+chown -R ${USERNAME}.${GROUPNAME} /spam

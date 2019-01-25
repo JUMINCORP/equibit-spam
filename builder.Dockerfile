@@ -6,8 +6,3 @@ RUN \
 	add-apt-repository ppa:bitcoin/bitcoin && \
 	apt-get update && \
 	apt-get install -y libdb4.8-dev libdb4.8++-dev
-
-#RUN \ 
-	#./autogen.sh && \
-	#./configure --without-gui && \
-	#make

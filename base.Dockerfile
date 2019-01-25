@@ -1,9 +1,10 @@
 FROM ubuntu:18.04
 
-COPY equibit-core/src/equibit-cli /bin/equibit-cli
-COPY equibit-core/src/equibitd /bin/equibitd
-COPY files/ec /bin/ec
-COPY files/spam /bin/spam
+COPY equibit-core/src/equibit-cli /usr/local/bin/equibit-cli
+COPY equibit-core/src/equibitd /usr/local/bin/equibitd
+COPY files/create-node-user /usr/local/bin/create-node-user
+COPY files/ec /usr/local/bin/ec
+COPY files/eqbnode /usr/local/bin/eqbnode
 
 WORKDIR	/spam 
 

@@ -1,0 +1,3 @@
+[submodule "equibit-core"]
+	path = equibit-core
+	url = git@github.com:Equibit/equibit-core

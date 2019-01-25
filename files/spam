@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 ln -s /spam /data
-/bin/equibitd -datadir=/spam
-
+create-node-user 0 0 spam spam
+sudo -u spam -g spam eqbnode

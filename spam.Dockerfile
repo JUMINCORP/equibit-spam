@@ -2,7 +2,7 @@ FROM darvs/eqb-node-base:latest
 
 COPY files/spam /usr/local/bin/
 COPY files/spam-equibit.conf /data/equibit.conf
-#COPY testnet-alpha/contrib/eqb-spam/ /spam/
+COPY testnet-alpha/contrib/eqb-spam/ /spam/
 
 RUN \
 	apt-get install -y python3-pip && \

@@ -14,5 +14,5 @@ docker run -d --name "${NAME}" \
 	-e PGID=$(id -g) \
 	-v /etc/localtime:/etc/localtime \
         -v /etc/timezone:/etc/timezone \
-	darvs/eqb-spammer:v01.024 \
+	darvs/eqb-node:v01.024 \
 	/bin/equibitd -datadir=/data -printoconsole

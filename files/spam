@@ -22,5 +22,7 @@ else
 	echo "'------------------------------------------------'"
 fi
 
+/spam/multi_spam.py
+
 # Sleep all day. Every day.
 while true; do sleep 1d; done

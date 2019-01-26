@@ -3,5 +3,6 @@ if [ -z "${PUID}" ] || [ -z "${PGID}" ]; then
 	equibitd -datadir=/data
 else
 	create-node-user "${PUID}" "${PGID}" equibit equibit
-	sudo -u equibit -p equibit equibitd -datadir=/data
+	sudo chown -R equibit.equibit /data
+	sudo -u equibit -g equibit equibitd -datadir=/data
 fi
